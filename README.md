@@ -16,7 +16,7 @@ https://www.tablesgenerator.com/markdown_tables
 *italique*
 **gras**
 
-[GOOGLE LINK](www.google.com)
+[www.google.com](www.google.com)
 
 - element 1
 - element 2
