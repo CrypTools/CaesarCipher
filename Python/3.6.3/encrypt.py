@@ -3,7 +3,7 @@ import string
 letters = 'abcdefghijklmnopqrstuvwxyz'
 
 def encrypt():
-  initial = input('Give the message (no space or special charracters) : ')
+  initial = input('Give the message (no space or special characters) : ')
 
   initial = initial.lower()
 
