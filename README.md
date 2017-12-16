@@ -1,6 +1,6 @@
 Pour mon petit frère qui va edit tous les README.md afin d'expliquer le fonctionnement de chaque code...
 
-C'est lui qui a créé le logo (:
+C'est lui qui a créé le logo (:  SAUTER DES LIGNES!!
 
 Syntaxe markdown : https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
@@ -18,7 +18,9 @@ Syntaxe markdown : https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsh
 
 
 *italique avec un astérix de chaque cote*
+
 **gras avec deux asterix de chaque cote**
+
 ***gras et italique en meme temps avec 3 de chaque cote***
 
 www.lien.com
