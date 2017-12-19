@@ -1,18 +1,16 @@
 import string 
 
-letters = 'abcdefghijklmnopqrstuvwxyz'
+LETTERS = 'abcdefghijklmnopqrstuvwxyz'
 
-def encrypt():
-  initial = input('Give the message to encrypt (no space or special characters) : ')
-
+def encrypt(initial, shift):
+  """ Use : encrypt("message", 98)
+  => 'gymmuay'
+  """
   initial = initial.lower()
-
-  shift = int(input("Give the value of the shift : "))
-
   output = ""
 
   for char in initial:
-    if char in letters:
-      output += letters[(letters.index(char) + shift) % len(letters)]
+    if char in LETTERS:
+      output += LETTERS[(LETTERS.index(char) + shift) % len(LETTERS)]
 
-  print("The encrypted message is : " + output)
+  return output
