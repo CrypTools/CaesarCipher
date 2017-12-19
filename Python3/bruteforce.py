@@ -1,9 +1,12 @@
 import string 
 
-letters = 'abcdefghijklmnopqrstuvwxyz'
+LETTERS = 'abcdefghijklmnopqrstuvwxyz'
 
-def bruteforce():
-  initial = input("Give the encrypted message : ")
+def bruteforce(initial):
+  """ Use : bruteforce('gymmuay')
+=> 'end'
+  """
+  initial = initial.lower()
   
   shift = 0
   output = ""
@@ -12,6 +15,7 @@ def bruteforce():
     output = ""
     shift +=1
     for char in initial:
-      if char in letters:
-        output += letters[(letters.index(char) + shift) % len(letters)]
+      if char in LETTERS:
+        output += LETTERS[(LETTERS.index(char) + shift) % len(LETTERS)]
     print(str(i) + " : " + output)
+  return "end"
