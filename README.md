@@ -2,14 +2,21 @@
 
 ## History and usage
 
-The *Caesar cipher* is 
+The *Caesar Cipher* was named after Julius Caesar (100 B.C. – 44 B.C). He would use the cipher for secret communication (protect messages of military significance). The Caesar Cipher is a substitution cipher. Originally, Julius Caesar would use a shift of three to encrypt/decrypt a message.
 
 ## Detailed Explanations : How it works?
 
-1. Firstly, 
-2. Then, 
-3. Therefore, 
-4. Finally 
+1. Firstly, each character of the initial text (message to encrypt) is converted in a number from 0 to 25, corresponding to its position in the Latin alphabet which contains 26 letters --> (a = 0, b = 1 ... z = 25 ).
+
+2. Then, each number obtained is transformed by an affine function (1x + b). "x" is representing the number while "b" is defined during the encryption. "b" is the key used to decrypt the final message.
+
+3. If we take all the images and put them in a list, we obtain n numbers corresponding to n charcaters of the initial text. The next step consists in finding the values of mudulo 26 of each number. (**Modulo means remainder**)
+
+> Example : Modulo 4 of 19 is **3** because 15 = 4 * 4 + **3** In the other hand, modulo 26 of 26 is **0** because 26 = 26 * 1 + **0**
+
+4.  Therefore, we cobtain a new list with n element, each between 0 and 25 both included. All these numbers are converted in letters of the Latin Alphabet using the tables below.
+
+5. We finally create the final message by putting all the letters side by side.
 
 tables : 
 
