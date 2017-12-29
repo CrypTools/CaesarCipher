@@ -20,19 +20,19 @@ The *Caesar Cipher* was named after Julius Caesar (100 B.C. – 44 B.C). He woul
 
 Steps 1 and 4 can be done with these tables : 
 
-| **A** | B | **C** | D | E | F | G | H | I | J | **K**  | L  | M  |
+| A | B | C | D | E | F | G | H | I | J | K  | L  | M  |
 |---|---|---|---|---|---|---|---|---|---|----|----|----|
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
 
-| N  | O  | P  | Q  | R  | S  | **T**  | U  | V  | W  | X  | Y  | **Z**  |
+| N  | O  | P  | Q  | R  | S  | T  | U  | V  | W  | X  | Y  |  Z |
 |----|----|----|----|----|----|----|----|----|----|----|----|----|
 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 |
 
 ## Weaknesses
 
-- If an attacker knows that the message has been encrypted using Caesar Cipher, he can try all shifts (b values from 1 to 25) to decrypt the message. This method is called bruteforce.
+- If an attacker knows that the message has been encrypted using Caesar Cipher, he can try all shifts (b values from 1 to 25) to decrypt the message. This is called the **bruteforce method**.
 
-- We can also use frequency analysis to decrypt the message as each letter is encrypted with the same algorithm and the most common letters in english are : 
+- We can also use **frequency analysis** to decrypt the message as each letter is encrypted with the same algorithm and the most common letters in english are : 
 
 Image centered : 
 
