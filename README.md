@@ -2,7 +2,7 @@
 
 ## History and usage
 
-The *Caesar Cipher* was named after Julius Caesar (100 B.C. – 44 B.C). He would use the cipher for secret communication (protect messages of military significance). The Caesar Cipher is a substitution cipher. Originally, Julius Caesar would use a shift of three to encrypt/decrypt a message.
+The *Caesar Cipher* was named after Julius Caesar (100 B.C. – 44 B.C). He would use the cipher for secret communication (protect messages of military significance). The Caesar Cipher is a **substitution cipher**. Originally, Julius Caesar would use a shift of three to encrypt/decrypt a message.
 
 ## Detailed Explanations : How it works?
 
@@ -18,13 +18,13 @@ The *Caesar Cipher* was named after Julius Caesar (100 B.C. – 44 B.C). He woul
 
 5. We finally create the final message by putting all the letters side by side.
 
-tables : 
+Steps 1 and 4 can be done with these tables : 
 
-| A | B | C | D | E | F | G | H | I | J | K  | L  | M  |
+| **A** | B | **C** | D | E | F | G | H | I | J | **K**  | L  | M  |
 |---|---|---|---|---|---|---|---|---|---|----|----|----|
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
 
-| N  | O  | P  | Q  | R  | S  | T  | U  | V  | W  | X  | Y  | Z  |
+| N  | O  | P  | Q  | R  | S  | **T**  | U  | V  | W  | X  | Y  | **Z**  |
 |----|----|----|----|----|----|----|----|----|----|----|----|----|
 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 |
 
