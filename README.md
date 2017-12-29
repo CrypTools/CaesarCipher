@@ -30,9 +30,9 @@ tables :
 
 ## Weaknesses
 
-- As 
+- If an attacker knows that the message has been encrypted using Caesar Cipher, he can try all shifts (b values from 1 to 25) to decrypt the message. This method is called bruteforce.
 
-- We can also use 
+- We can also use frequency analysis to decrypt the message as each letter is encrypted with the same algorithm and the most common letters in english are : 
 
 Image centered : 
 
@@ -40,15 +40,33 @@ Image centered :
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/English_letter_frequency_%28alphabetic%29.svg/340px-English_letter_frequency_%28alphabetic%29.svg.png">
 </p>
 
-- Other possibilities include
-
-- Knowing 
-
 ## Example
 
-(Write all steps)
+- Message to encrypt : **ZATTACKZ**
+- Shift used : 4 (f(x) = x + 4)
+- That means that **b = 4**
 
-- 
-- 
-- 
-- 
+Using the above tables, ATTACK can be written as : **25 0 19 19 0 2 10 25**
+Images of each number :
+
+- f(25) = 29
+- f(0) = 4
+- f(19) = 23
+- f(2) = 6
+- f(10) = 14
+
+The new list is : **29 4 23 23 4 6 14 29**
+
+Using the **modulo 26 method**, we obtain:
+
+- Mod(29,26) = 3
+- Mod(4,26) = 4
+- Mod(23,26) = 23
+- Mod(6,26) = 6
+- Mod(14,26) = 14
+
+The final message is **3 4 23 23 4 6 14 3** and using the tables again, we convert them in the encrypted message :
+
+> **DEXXEGOD**
+
+**ZATTACKZ** is encrypted with the function **x + 4** and becomes **DEXXEGOD**.
