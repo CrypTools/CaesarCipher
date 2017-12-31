@@ -40,11 +40,13 @@ Steps 1 and 4 can be done with these tables :
 
 ## Example
 
+### Encrypting
+
 - Message to encrypt : **ZATTACKZ**
-- Shift used : 4 (f(x) = x + 4)
+- Shift used : 4 (f(x) = 1x + 4)
 - That means that **b = 4**
 
-Using the above tables, ATTACK can be written as : **25 0 19 19 0 2 10 25**
+Using the above tables, **ATTACK** can be written as : **25 0 19 19 0 2 10 25**
 Images of each number :
 
 - f(25) = 29
@@ -68,3 +70,36 @@ The final message is **3 4 23 23 4 6 14 3** and using the tables again, we conve
 > **DEXXEGOD**
 
 **ZATTACKZ** is encrypted with the function **x + 4** and becomes **DEXXEGOD**.
+
+### Decrypting
+
+#### First method : Knowing the key (value of the shift used)
+
+- Message to decrypt : **DEXXEGOD**
+- Shift used : 4 (f(x) = 1x - 4)
+- That means that **b = -4**
+
+Using the above tables, **DEXXEGOD** can be written as : **3 4 23 23 4 6 14 3**
+Images of each number :
+
+- f(3) = -1
+- f(4) = 0
+- f(23) = 19
+- f(6) = 2
+- f(14) = 10
+
+The new list is : **-1 0 19 19 0 2 10 -1**
+
+Using the **modulo 26 method**, we obtain : 
+
+- Mod(-1,26) = 25
+- Mod(0,26) = 0
+- Mod(19,26) = 19
+- Mod(2,26) = 2
+- Mod(10,26) = 10
+
+The final message is **25 0 19 19 0 2 10 25** and using the tables again, we convert them in the encrypted message :
+
+> **ZATTACKZ**
+
+**DEXXEGOD** is decrypted with the function **1x - 4** and becomes **ZATTACKZ**.
