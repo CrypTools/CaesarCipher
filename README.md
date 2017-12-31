@@ -116,12 +116,34 @@ a is a number between 0 and 25. (a = 0 would mean the message is already decrypt
 
 Using the function f(x) = Mod(1x + a, 26) :
 We can get all these results 
-|a|image|
-|1|ghgaa|
-|2|ghgaa|
-|3|ghgaa|
-|4|ghgaa|
-|5|ghgaa|
+
+| a  |   |
+|----|---|
+| 1  |   |
+| 2  |   |
+| 3  |   |
+| 4  |   |
+| 5  |   |
+| 6  |   |
+| 7  |   |
+| 8  |   |
+| 9  |   |
+| 10 |   |
+| 11 |   |
+| 12 |   |
+| 13 |   |
+| 14 |   |
+| 15 |   |
+| 16 |   |
+| 17 |   |
+| 18 |   |
+| 19 |   |
+| 20 |   |
+| 21 |   |
+| 22 |   |
+| 23 |   |
+| 24 |   |
+| 25 |   |
 
 
 The new list is : **-1 0 19 19 0 2 10 -1**
