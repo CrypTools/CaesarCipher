@@ -103,3 +103,37 @@ The final message is **25 0 19 19 0 2 10 25** and using the tables again, we con
 > **ZATTACKZ**
 
 **DEXXEGOD** is decrypted with the function **1x - 4** and becomes **ZATTACKZ**.
+
+#### Second method : Not knowing the key (value of the shift used)
+
+This is called the bruteforce method.
+
+- Message to decrypt : **DEXXEGOD**
+
+Using the above tables, **DEXXEGOD** can be written as : **3 4 23 23 4 6 14 3**
+
+a is a number between 0 and 25. (a = 0 would mean the message is already decrypted) 
+
+Using the function f(x) = 1x + a 
+
+- f(3) = -1
+- f(4) = 0
+- f(23) = 19
+- f(6) = 2
+- f(14) = 10
+
+The new list is : **-1 0 19 19 0 2 10 -1**
+
+Using the **modulo 26 method**, we obtain : 
+
+- Mod(-1,26) = 25
+- Mod(0,26) = 0
+- Mod(19,26) = 19
+- Mod(2,26) = 2
+- Mod(10,26) = 10
+
+The final message is **25 0 19 19 0 2 10 25** and using the tables again, we convert them in the encrypted message :
+
+> **ZATTACKZ**
+
+**DEXXEGOD** is decrypted with the function **1x - 4** and becomes **ZATTACKZ**.
