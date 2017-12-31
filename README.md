@@ -34,8 +34,6 @@ Steps 1 and 4 can be done with these tables :
 
 - We can also use **frequency analysis** to decrypt the message as each letter is encrypted with the same algorithm and the most common letters in english are : 
 
-Image centered : 
-
 <p align="center"> 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/English_letter_frequency_%28alphabetic%29.svg/340px-English_letter_frequency_%28alphabetic%29.svg.png">
 </p>
