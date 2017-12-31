@@ -114,13 +114,15 @@ Using the above tables, **DEXXEGOD** can be written as : **3 4 23 23 4 6 14 3**
 
 a is a number between 0 and 25. (a = 0 would mean the message is already decrypted) 
 
-Using the function f(x) = 1x + a 
+Using the function f(x) = Mod(1x + a, 26) :
+We can get all these results 
+|a|image|
+|1|ghgaa|
+|2|ghgaa|
+|3|ghgaa|
+|4|ghgaa|
+|5|ghgaa|
 
-- f(3) = -1
-- f(4) = 0
-- f(23) = 19
-- f(6) = 2
-- f(14) = 10
 
 The new list is : **-1 0 19 19 0 2 10 -1**
 
