@@ -119,32 +119,31 @@ We can get all these results
 
 | a  |   |
 |----|---|
-| 1  |   |
-| 2  |   |
-| 3  |   |
-| 4  |   |
-| 5  |   |
-| 6  |   |
-| 7  |   |
-| 8  |   |
-| 9  |   |
-| 10 |   |
-| 11 |   |
-| 12 |   |
-| 13 |   |
-| 14 |   |
-| 15 |   |
-| 16 |   |
-| 17 |   |
-| 18 |   |
-| 19 |   |
-| 20 |   |
-| 21 |   |
-| 22 |   |
-| 23 |   |
-| 24 |   |
-| 25 |   |
-
+| 1  |fgzzgiqf|
+| 2  |ghaahjrg|
+| 3  |hibbiksh|
+| 4  |ijccjlti|
+| 5  |jkddkmuj|
+| 6  |kleelnvk|
+| 7  |lmffmowl|
+| 8  |mnggnpxm|
+| 9  |nohhoqyn|
+| 10 |opiiprzo|
+| 11 |pqjjqsap|
+| 12 |qrkkrtbq|
+| 13 |rsllsucr|
+| 14 |stmmtvds|
+| 15 |tunnuwet|
+| 16 |uvoovxfu|
+| 17 |vwppwygv|
+| 18 |wxqqxzhw|
+| 19 |xyrryaix|
+| 20 |yzsszbjy|
+| 21 |zattackz| <-- This is the only text that makes sense and 25 - b = 21 (b = -4)
+| 22 |abuubdla|
+| 23 |bcvvcemb|
+| 24 |cdwwdfnc|
+| 25 |dexxegod|
 
 The new list is : **-1 0 19 19 0 2 10 -1**
 
