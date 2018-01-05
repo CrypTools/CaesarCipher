@@ -115,9 +115,10 @@ Using the above tables, **DEXXEGOD** can be written as : **3 4 23 23 4 6 14 3**
 a is a number between 0 and 25. (a = 0 would mean the message is already decrypted) 
 
 Using the function f(x) = Mod(1x + a, 26) :
-We can get all these results 
 
-| a  |   |
+We can get all these results :
+
+| a  |Decrypted text|
 |----|---|
 | 1  |fgzzgiqf|
 | 2  |ghaahjrg|
@@ -139,24 +140,12 @@ We can get all these results
 | 18 |wxqqxzhw|
 | 19 |xyrryaix|
 | 20 |yzsszbjy|
-| 21 |zattackz| <-- This is the only text that makes sense and 25 - b = 21 (b = -4)
+| 21 |zattackz| 
 | 22 |abuubdla|
 | 23 |bcvvcemb|
 | 24 |cdwwdfnc|
 | 25 |dexxegod|
 
-The new list is : **-1 0 19 19 0 2 10 -1**
+The only text that makes sense is zattackz so we can deduce that the key is 21 (25 - b = 21).
 
-Using the **modulo 26 method**, we obtain : 
-
-- Mod(-1,26) = 25
-- Mod(0,26) = 0
-- Mod(19,26) = 19
-- Mod(2,26) = 2
-- Mod(10,26) = 10
-
-The final message is **25 0 19 19 0 2 10 25** and using the tables again, we convert them in the encrypted message :
-
-> **ZATTACKZ**
-
-**DEXXEGOD** is decrypted with the function **1x - 4** and becomes **ZATTACKZ**.
+**DEXXEGOD** is decrypted with the function **1x - 4** or **1x + 21** and becomes **ZATTACKZ**.
