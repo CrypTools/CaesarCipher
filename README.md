@@ -2,13 +2,13 @@
 
 ## History and usage
 
-The *Caesar Cipher* was named after Julius Caesar (100 B.C. – 44 B.C). He would use the cipher for secret communication (protect messages of military significance). The Caesar Cipher is a **substitution cipher**. Originally, Julius Caesar would use a shift of three to encrypt/decrypt a message. The Caesar Cipher encrypts a message using an affine function : 1x + b.
+The *Caesar Cipher* was named after Julius Caesar (100 B.C. – 44 B.C). He would use the cipher for secret communication (protect messages of military significance). The Caesar Cipher is a **substitution cipher**. Originally, Julius Caesar would use a shift of three to encrypt/decrypt a message. The Caesar Cipher encrypts a message using an affine function : f(x) = 1x + b.
 
 ## Detailed Explanations : How it works?
 
 1. Firstly, each character of the initial text (message to encrypt) is converted in a number from 0 to 25, corresponding to its position in the Latin alphabet which contains 26 letters --> (a = 0, b = 1 ... z = 25 ).
 
-2. Then, each number obtained is transformed by an affine function (1x + b). "x" is representing the number while "b" is defined during the encryption. "b" is the key used to decrypt the final message.
+2. Then, each number obtained is transformed by an affine function (f(x) = 1x + b). "x" is representing the number while "b" is defined during the encryption. "b" is the key used to decrypt the final message.
 
 3. If we take all the images and put them in a list, we obtain n numbers corresponding to n charcaters of the initial text. The next step consists in finding the values of mudulo 26 of each number. (**Modulo means remainder**)
 
@@ -148,4 +148,4 @@ We can get all these results :
 
 The only text that makes sense is zattackz so we can deduce that the key is 21 (25 - b = 21).
 
-**DEXXEGOD** is decrypted with the function **1x - 4** or **1x + 21** and becomes **ZATTACKZ**.
+**DEXXEGOD** is decrypted with the function **f(x) = 1x - 4** or **f(x) = 1x + 21** and becomes **ZATTACKZ**.
