@@ -11,3 +11,4 @@ String.prototype.encrypt = function(n) {
 	}
 	return out;
 }
+module.exports = (text, n) => text.encrypt(n)

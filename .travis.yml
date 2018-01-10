@@ -1,0 +1,20 @@
+dist: trusty
+sudo: required
+env:
+    - SWIFT_VERSION=4.0.3
+language:               node_js
+node_js:
+    - "node"
+    - "lts/*"
+    - "7"
+    - "8"
+before_install:
+    - npm install -g npm@latest
+    - npm install -g eye.js
+install:
+    - eval "$(curl -sL https://swiftenv.fuller.li/install.sh)" # Install swift
+script:
+    - eye # JS
+    - swiftc Swift/lib.swift -o out # Swift
+notifications:
+  email:                false

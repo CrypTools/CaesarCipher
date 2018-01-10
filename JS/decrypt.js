@@ -11,3 +11,4 @@ String.prototype.decrypt = function(n) {
 	}
 	return out;
 }
+module.exports = (text, n) => text.decrypt(n)
