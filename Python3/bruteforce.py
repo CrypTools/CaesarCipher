@@ -1,5 +1,3 @@
-import string 
-
 LETTERS = 'abcdefghijklmnopqrstuvwxyz'
 
 def bruteforce(initial):
