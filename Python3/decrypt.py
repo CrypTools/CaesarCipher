@@ -1,5 +1,3 @@
-import string 
-
 LETTERS = 'abcdefghijklmnopqrstuvwxyz'
 
 def decrypt(initial, shift):
