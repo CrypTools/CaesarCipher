@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace CaesarLib
 {
-    class Caesar
+    public class Caesar
     {
+        static public string Encrypt(string text, int shift)
+        {
+            string message = null;
+            for(int i = 0; i < text.Length; i++)
+            {
+                int ASCII = (int)text[i];
+                message += (char)(ASCII + shift);
+            }
+            return message;
+        }
     }
 }
