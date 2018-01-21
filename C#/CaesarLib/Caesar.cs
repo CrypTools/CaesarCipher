@@ -8,6 +8,12 @@ namespace CaesarLib
 {
     public class Caesar
     {
+        /// <summary>
+        /// Encrypt string using Caesar Cipher
+        /// </summary>
+        /// <param name="text">string to encrypt</param>
+        /// <param name="shift">Shift by how many letters</param>
+        /// <returns>encrypted string</returns>
         static public string Encrypt(string text, int shift)
         {
             string message = null;
