@@ -1,8 +1,6 @@
-encrypt: encrypt.c
-	$(CC) encrypt.c -o encrypt
 
-decrypt: decrypt.c
-	$(CC) decrypt.c -o decrypt
+caesar : caesar.c
+	$(CC) caesar.c -o caesar
 
 clean :
-	rm -f encrypt decrypt
+	rm -f caesar
