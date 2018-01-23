@@ -15,9 +15,9 @@ int main(int argc, char *argv[]) {
   /* set shift */
   if (argc > 1) {
     shift = atoi (argv[1]);
-    if (shift > 26) {
-      printf("ERROR: can't be larger than 26");
-      return 1;
+    if (shift > 95) {
+      printf("ERROR: can''t be larger than 95");
+      exit(1);
     }
   }
 
@@ -37,16 +37,17 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 
+/* takes a string and increments each char by shift */
 void encrypt(int shift, unsigned char text[])
 {
   while (*text) {
     *text += shift;
 
-    while (*text > 126) {
+    if (*text > 126) {
       *text = *text - 95;
     }
 
-    while (*text < 32) {
+    if (*text < 32) {
       *text = *text + 95;
     }
     
