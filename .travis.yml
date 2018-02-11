@@ -15,7 +15,7 @@ install:
     - eval "$(curl -sL https://swiftenv.fuller.li/install.sh)" # Install swift
 script:
     - eye # JS
-    - swiftc Swift/lib.swift -o out # Swift
-    - cd C && make # C
+    - swiftc swift/lib.swift -o out # Swift
+    - cd c && make # C
 notifications:
   email:                false

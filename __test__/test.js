@@ -1,6 +1,6 @@
 // Test made using EyeJS - https://eye.js.org
 
-const path = require('path').normalize(__testDir + "/../JS/")
+const path = require('path').normalize(__testDir + "/../js/")
 
 const encrypt = require(path + "encrypt.js")
 const decrypt = require(path + "decrypt.js")
