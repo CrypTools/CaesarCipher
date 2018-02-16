@@ -31,7 +31,11 @@ extension String {
 
 // Basic testing for swift
 
-import Darwin
+#if os(Linux) || os(FreeBSD)
+    import Glibc
+#else
+    import Darwin
+#endif
 
 func test() -> Int {
     print("Testing Encryption")
