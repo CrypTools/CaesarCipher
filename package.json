@@ -24,5 +24,6 @@
   "homepage": "https://github.com/CrypTools/CaesarCipher#readme",
   "devDependencies": {
     "eye.js": "^1.1.0"
-  }
+  },
+  "dependencies": {}
 }
