@@ -1,5 +1,5 @@
 {
-  "name": "@cryptools/caesarcipher",
+  "name": "@cryptoolsorg/caesarcipher",
   "version": "1.0.0",
   "description": "Caesar Cipher implementation by CrypTools",
   "main": "js/lib.js",
