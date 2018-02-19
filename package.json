@@ -1,0 +1,28 @@
+{
+  "name": "@cryptools/caesarcipher",
+  "version": "1.0.0",
+  "description": "Caesar Cipher implementation by CrypTools",
+  "main": "js/lib.js",
+  "scripts": {
+    "test": "eye"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrypTools/CaesarCipher.git"
+  },
+  "keywords": [
+    "cryptools",
+    "cipher",
+    "caesarcipher",
+    "cryptography"
+  ],
+  "author": "CrypTools",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CrypTools/CaesarCipher/issues"
+  },
+  "homepage": "https://github.com/CrypTools/CaesarCipher#readme",
+  "devDependencies": {
+    "eye.js": "^1.1.0"
+  }
+}
