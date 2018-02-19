@@ -2,7 +2,7 @@
 
 ## History and usage
 
-The *Caesar Cipher* was named after Julius Caesar (100 B.C. – 44 B.C). He would use the cipher for secret communication (protect messages of military significance). The Caesar Cipher is a **substitution cipher**. Originally, Julius Caesar would use a shift of three to encrypt/decrypt a message. The Caesar Cipher encrypts a message using an affine function : f(x) = 1x + b.
+The _Caesar Cipher_ was named after Julius Caesar (100 B.C. – 44 B.C). He would use the cipher for secret communication (protect messages of military significance). The Caesar Cipher is a **substitution cipher**. Originally, Julius Caesar would use a shift of three to encrypt/decrypt a message. The Caesar Cipher encrypts a message using an affine function : f(x) = 1x + b.
 
 ## Detailed Explanations : How it works?
 
@@ -12,31 +12,29 @@ The *Caesar Cipher* was named after Julius Caesar (100 B.C. – 44 B.C). He woul
 
 3. If we take all the images and put them in a list, we obtain n numbers corresponding to n characters of the initial text. The next step consists in finding the values of modulo 26 of each number. (**Modulo means remainder**)
 
-> Example : Modulo 4 of 19 is **3** because 15 = 4 * 4 + **3** In the other hand, modulo 26 of 26 is **0** because 26 = 26 * 1 + **0**
+> Example : Modulo 4 of 19 is **3** because `19 = 4 * 4 + 3` In the other hand, modulo 26 of 26 is **0** because `26 = 26 * 1 + 0`
 
-4.  Therefore, we obtain a new list with n element, each between 0 and 25 both included. All these numbers are converted in letters of the Latin Alphabet using the tables below.
+1. Therefore, we obtain a new list with n element, each between 0 and 25 both included. All these numbers are converted in letters of the Latin Alphabet using the tables below.
 
-5. We finally create the final message by putting all the letters side by side.
+2. We finally create the final message by putting all the letters side by side.
 
-Steps 1 and 4 can be done with these tables : 
+Steps 1 and 4 can be done with these tables :
 
-| A | B | C | D | E | F | G | H | I | J | K  | L  | M  |
-|---|---|---|---|---|---|---|---|---|---|----|----|----|
-| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+A | B | C | D | E | F | G | H | I | J | K  | L  | M
+- | - | - | - | - | - | - | - | - | - | -- | -- | --
+0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
 
-| N  | O  | P  | Q  | R  | S  | T  | U  | V  | W  | X  | Y  |  Z |
-|----|----|----|----|----|----|----|----|----|----|----|----|----|
-| 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 |
+N  | O  | P  | Q  | R  | S  | T  | U  | V  | W  | X  | Y  | Z
+-- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | --
+13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25
 
 ## Weaknesses
 
 - If an attacker knows that the message has been encrypted using Caesar Cipher, he can try all shifts (b values from 1 to 25) to decrypt the message. This is called the **bruteforce method**.
 
-- We can also use **frequency analysis** to decrypt the message as each letter is encrypted with the same algorithm and the most common letters in english are : 
+- We can also use **frequency analysis** to decrypt the message as each letter is encrypted with the same algorithm and the most common letters in english are :
 
-<p align="center"> 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/English_letter_frequency_%28alphabetic%29.svg/340px-English_letter_frequency_%28alphabetic%29.svg.png">
-</p>
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/English_letter_frequency_%28alphabetic%29.svg/340px-English_letter_frequency_%28alphabetic%29.svg.png)
 
 ## Example
 
@@ -46,8 +44,7 @@ Steps 1 and 4 can be done with these tables :
 - Shift used : 4 (f(x) = 1x + 4)
 - That means that **b = 4**
 
-Using the above tables, **ATTACK** can be written as : **25 0 19 19 0 2 10 25**
-Images of each number :
+Using the above tables, **ATTACK** can be written as : **25 0 19 19 0 2 10 25** Images of each number :
 
 - f(25) = 29
 - f(0) = 4
@@ -79,8 +76,7 @@ The final message is **3 4 23 23 4 6 14 3** and using the tables again, we conve
 - Shift used : 4 (f(x) = 1x - 4)
 - That means that **b = -4**
 
-Using the above tables, **DEXXEGOD** can be written as : **3 4 23 23 4 6 14 3**
-Images of each number :
+Using the above tables, **DEXXEGOD** can be written as : **3 4 23 23 4 6 14 3** Images of each number :
 
 - f(3) = -1
 - f(4) = 0
@@ -90,7 +86,7 @@ Images of each number :
 
 The new list is : **-1 0 19 19 0 2 10 -1**
 
-Using the **modulo 26 method**, we obtain : 
+Using the **modulo 26 method**, we obtain :
 
 - Mod(-1,26) = 25
 - Mod(0,26) = 0
@@ -112,40 +108,59 @@ This is called the bruteforce method.
 
 Using the above tables, **DEXXEGOD** can be written as : **3 4 23 23 4 6 14 3**
 
-a is a number between 0 and 25. (a = 0 would mean the message is already decrypted) 
+a is a number between 0 and 25\. (a = 0 would mean the message is already decrypted)
 
 Using the function f(x) = Mod(1x + a, 26) :
 
 We can get all these results :
 
-| a  |Decrypted text|
-|----|---|
-| 1  |fgzzgiqf|
-| 2  |ghaahjrg|
-| 3  |hibbiksh|
-| 4  |ijccjlti|
-| 5  |jkddkmuj|
-| 6  |kleelnvk|
-| 7  |lmffmowl|
-| 8  |mnggnpxm|
-| 9  |nohhoqyn|
-| 10 |opiiprzo|
-| 11 |pqjjqsap|
-| 12 |qrkkrtbq|
-| 13 |rsllsucr|
-| 14 |stmmtvds|
-| 15 |tunnuwet|
-| 16 |uvoovxfu|
-| 17 |vwppwygv|
-| 18 |wxqqxzhw|
-| 19 |xyrryaix|
-| 20 |yzsszbjy|
-| 21 |zattackz| 
-| 22 |abuubdla|
-| 23 |bcvvcemb|
-| 24 |cdwwdfnc|
-| 25 |dexxegod|
+a  | Decrypted text
+-- | --------------
+1  | fgzzgiqf
+2  | ghaahjrg
+3  | hibbiksh
+4  | ijccjlti
+5  | jkddkmuj
+6  | kleelnvk
+7  | lmffmowl
+8  | mnggnpxm
+9  | nohhoqyn
+10 | opiiprzo
+11 | pqjjqsap
+12 | qrkkrtbq
+13 | rsllsucr
+14 | stmmtvds
+15 | tunnuwet
+16 | uvoovxfu
+17 | vwppwygv
+18 | wxqqxzhw
+19 | xyrryaix
+20 | yzsszbjy
+21 | zattackz
+22 | abuubdla
+23 | bcvvcemb
+24 | cdwwdfnc
+25 | dexxegod
 
 The only text that makes sense is zattackz so we can deduce that the key is 21 (25 - b = 21).
 
 **DEXXEGOD** is decrypted with the function **f(x) = 1x - 4** or **f(x) = 1x + 21** and becomes **ZATTACKZ**.
+
+# Implementations
+
+Language   | Encrypt                             | Decrypt
+---------- | ----------------------------------- | ----------------------------
+C          | [caesar.c](c/caesar.c)              | _Coming Soon_
+C#         | [Caesar.cs](c#/CaesarLib/Caesar.cs) | _Coming Soon_
+C++        | [main.cpp](cpp/main.cpp)            | [main.cpp](cpp/main.cpp)
+JavaScript | [encrypt.js](js/encrypt.js)         | [decrypt.js](js/decrypt.js)
+Python     | [encrypt.py](py/encrypt.py)         | [decrypt.py](py/decrypt.py)
+Swift      | [lib.swift](swift/lib.swift)        | [lib.swift](swift/lib.swift)
+
+## Package Managers
+
+### NPM (for JS):
+
+```bash
+npm i @cryptoolsorg/caesarcipher
+```
