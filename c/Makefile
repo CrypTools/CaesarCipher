@@ -1,5 +1,10 @@
-caesar : caesar.c
-	$(CC) caesar.c -o caesar -Wall
+CC=gcc
+CFLAGS  = -Wall -Werror -O
 
-clean :
-	rm -f caesar
+TARGET = caesar
+
+$(TARGET): $(TARGET).c
+	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
+clean:
+	$(RM) $(TARGET)
+

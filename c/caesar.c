@@ -1,64 +1,54 @@
+// CrypTools - GitHub
+// Tuesday, 14 August 2018
+// Caesar Cipher to encrypt text
+
 /*****
 Compile:
-make
+$ make
 Use:
-./caesar KEYNUM < file.txt
+$ ./caesar KEYNUM < file.txt
 *****/
 
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <assert.h>
 
-#define MAXLEN 9000
+#define MINCAP 65
+#define MAXCAP 90
 
-void encrypt (int shiftNumber,unsigned char textToEncrypt[]);
+#define MINLOW 97
+#define MAXLOW 122
 
-/* Takes an int, and some characters to encrypt */
-int main(int argc, char *argv[]) {
-  int i, c;
-  unsigned char input[MAXLEN] = "";
-  int shift = 0;
+void encode (int shiftNumber, char letter);
 
-  /* set shift */
-  if (argc > 1) {
+// Takes an int and a file containing text to encrypt
+int main (int argc, char *argv[]) {
+    int shift = 0;
+    int c = 0;
+    // set shift
     shift = atoi (argv[1]);
-    if (shift > 95) {
-      printf("ERROR: can''t be larger than 95");
-      exit(1);
+    while((c = getchar()) != EOF) {
+        encode(shift, c);
     }
-  }
-
-  /* set input */
-  if (argc > 2) {
-    strcpy( (char*) input, argv[2]);
-  } else {
-    for (i = 0; i < MAXLEN - 1 && (c=getchar()) != EOF; i++) {
-      input[i] = c;
-    }
-    input[++i] = '\0';
-  }
-
-  encrypt(shift, &input[0]);
-  printf("%s\n", input);
-
-  return 0;
+    printf("\n");
+    return EXIT_SUCCESS;
 }
 
 /* takes a string and increments each char by shift */
-void encrypt(int shift, unsigned char text[])
-{
-  while (*text) {
-    *text += shift;
-
-    if (*text > 126) {
-      *text = *text - 95;
+void encode (int shift, char letter) {
+    int numAscii = letter;
+    int firstLetter;
+    if (numAscii >= MINCAP && numAscii <= MAXCAP) {
+        firstLetter = MINCAP;
+    } else if (numAscii >= MINLOW && numAscii <= MAXLOW) {
+        firstLetter = MINLOW;
+    } else {
+        putchar(letter);
+        return;
     }
-
-    if (*text < 32) {
-      *text = *text + 95;
-    }
-    
-    text++;
-  }
+    numAscii -= (firstLetter - shift);
+    numAscii = (numAscii % 26);
+    numAscii += firstLetter;
+    putchar(numAscii);
 }
 
