@@ -11,7 +11,6 @@ $ ./caesar KEYNUM < file.txt
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <assert.h>
 
 #define MINCAP 65
 #define MAXCAP 90
