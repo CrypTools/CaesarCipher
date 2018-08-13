@@ -27,7 +27,7 @@ int main (int argc, char *argv[]) {
     int c = 0;
     // set shift
     shift = atoi (argv[1]);
-    while((c = getchar()) != EOF) {
+    while ((c = getchar()) != EOF) {
         encode(shift, c);
     }
     printf("\n");
