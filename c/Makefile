@@ -1,4 +1,3 @@
-
 caesar : caesar.c
 	$(CC) caesar.c -o caesar -Wall
 

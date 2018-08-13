@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
   }
 
   encrypt(shift, &input[0]);
-  printf("%s", input);
+  printf("%s\n", input);
 
   return 0;
 }
@@ -54,3 +54,4 @@ void encrypt(int shift, unsigned char text[])
     text++;
   }
 }
+
