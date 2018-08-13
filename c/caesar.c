@@ -1,3 +1,10 @@
+/*****
+Compile:
+make
+Use:
+./caesar KEYNUM < file.txt
+*****/
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
