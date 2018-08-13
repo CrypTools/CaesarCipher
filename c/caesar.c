@@ -34,7 +34,7 @@ int main (int argc, char *argv[]) {
     return EXIT_SUCCESS;
 }
 
-/* takes a string and increments each char by shift */
+/* takes a character and increments it by shift */
 void encode (int shift, char letter) {
     int numAscii = letter;
     int firstLetter;
