@@ -1,4 +1,4 @@
-package edu.duke;
+package resources;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,10 +10,6 @@ import java.io.PrintWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
-import java.io.Reader;
-import java.io.StringReader;
-import org.apache.commons.csv.CSVFormat;
-import org.apache.commons.csv.CSVParser;
 
 
 /**
@@ -167,9 +163,6 @@ public class FileResource {
      * @return an <code>Iterable</code> that will allow access to contents of opened file one line
      *         at a time.
      */
-    public Iterable<String> lines () {
-        return new TextIterable(mySource, "\\n");
-    }
 
     /**
      * Allow access to this opened file one word at a time, where words are separated by
@@ -178,9 +171,6 @@ public class FileResource {
      * @return an <code>Iterable</code> that will allow access to contents of opened file one word
      *         at a time.
      */
-    public Iterable<String> words () {
-        return new TextIterable(mySource, "\\s+");
-    }
 
     /**
      * Return entire contents of this opened file as one string.
@@ -201,9 +191,6 @@ public class FileResource {
      *         time
      * @throws exception if this file does not represent a CSV formatted data
      */
-    public CSVParser getCSVParser () {
-        return getCSVParser(true);
-    }
 
     /**
      * Returns a <code>CSVParser</code> object to access the contents of an open file, possibly
@@ -217,9 +204,6 @@ public class FileResource {
      *         time
      * @throws exception if this file does not represent a CSV formatted data
      */
-    public CSVParser getCSVParser (boolean withHeader) {
-        return getCSVParser(withHeader, ",");
-    }
 
     /**
      * Returns a <code>CSVParser</code> object to access the contents of an open file, possibly
@@ -236,25 +220,6 @@ public class FileResource {
      * @throws exception if this file does not represent a CSV formatted data
      * @throws exception if <code>delimiter.length() != 1</code>
      */
-    public CSVParser getCSVParser (boolean withHeader, String delimiter) {
-        if (delimiter == null || delimiter.length() != 1) {
-            throw new ResourceException("FileResource: CSV delimiter must be a single character: " + delimiter);
-        }
-        try {
-            char delim = delimiter.charAt(0);
-            Reader input = new StringReader(mySource);
-            if (withHeader) {
-                return new CSVParser(input, CSVFormat.EXCEL.withHeader().withDelimiter(delim));
-            }
-            else {
-                return new CSVParser(input, CSVFormat.EXCEL.withDelimiter(delim));
-            }
-        }
-        catch (Exception e) {
-            throw new ResourceException("FileResource: cannot read " + myPath + " as a CSV file.");
-        }
-    }
-
     /**
      * Allows access to the column names of the header row of a CSV file (the first line in the
      * file) one at a time. If the CSV file did not have a header row, then an empty
@@ -263,9 +228,6 @@ public class FileResource {
      * @param parser the <code>CSVParser</code> that has been created for this file
      * @return an <code>Iterable</code> that allows access one header name at a time
      */
-    public Iterable<String> getCSVHeaders (CSVParser parser) {
-        return parser.getHeaderMap().keySet();
-    }
 
     /**
      * Writes a string to the end of this file.
@@ -283,10 +245,6 @@ public class FileResource {
      * 
      * @param list the strings to saved to the file
      */
-    public void write (StorageResource list) {
-        // we know it is an ArrayList underneath
-        write((ArrayList<String>)(list.data()));
-    }
 
     /**
      * Writes a list of strings to the end of this file, one element per line.

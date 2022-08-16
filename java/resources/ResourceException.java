@@ -1,4 +1,4 @@
-package edu.duke;
+package resources;
 
 
 /**

@@ -1,4 +1,4 @@
 /**
  * Resource classes for Duke/Coursera course.
  */
-package edu.duke;
+package resources;
