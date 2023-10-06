@@ -151,6 +151,7 @@ C#         | [Caesar.cs](c#/CaesarLib/Caesar.cs) | _Coming Soon_
 C++        | [main.cpp](cpp/main.cpp)            | [main.cpp](cpp/main.cpp)
 JavaScript | [encrypt.js](js/encrypt.js)         | [decrypt.js](js/decrypt.js)
 Python     | [encrypt.py](py/encrypt.py)         | [decrypt.py](py/decrypt.py)
+Java       | [encrypt.java](java/encrypt.java)   | [encrypt.java](java/encrypt.java)
 Swift      | [lib.swift](swift/lib.swift)        | [lib.swift](swift/lib.swift)
 
 ## Package Managers
