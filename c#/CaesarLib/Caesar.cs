@@ -16,13 +16,23 @@ namespace CaesarLib
         /// <returns>encrypted string</returns>
         static public string Encrypt(string text, int shift)
         {
-            string message = null;
+            char[] message = new char[text.Length];
             for(int i = 0; i < text.Length; i++)
             {
                 int ASCII = (int)text[i];
-                message += (char)(ASCII + shift);
+                message[i] = (char)(ASCII + shift);
             }
-            return message;
+            return message.ToString();
+        }
+        static public string Decrypt(string encryptedString, int shift) 
+        {
+            char[] message = new char[encryptedString.Length];
+            for (int i = 0; i < encryptedString.Length; i++)
+            {
+                int ASCII = (int)text[i];
+                message[i] = (char)(ASCII - shift);
+            }
+            return message.ToString();
         }
     }
 }
