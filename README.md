@@ -2,7 +2,7 @@
 
 ## History and usage
 
-The _Caesar Cipher_ was named after Julius Caesar (100 B.C. – 44 B.C). He would use the cipher for secret communication (protect messages of military significance). The Caesar Cipher is a **substitution cipher**. Originally, Julius Caesar would use a shift of three to encrypt/decrypt a message. The Caesar Cipher encrypts a message using an affine function : f(x) = 1x + b.
+The Caesar Cipher was named after Julius Caesar (100 B.C. – 44 B.C.), who used it for secret military communication. The Caesar Cipher is a substitution cipher. Julius Caesar originally used a shift of three to encrypt and decrypt messages. The encryption is performed using an affine function: f(x)=x+b.
 
 ## Detailed Explanation : How it works?
 
