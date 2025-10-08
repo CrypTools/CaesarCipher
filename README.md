@@ -160,3 +160,8 @@ Swift      | [lib.swift](swift/lib.swift)        | [lib.swift](swift/lib.swift)
 ```bash
 npm i @cryptoolsorg/caesarcipher
 ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
